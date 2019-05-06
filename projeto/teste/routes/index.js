@@ -6,10 +6,10 @@ sql.close();
 
 
 const config = {
-  user: 'davi.teixeira',
-  password: '#Gf31772308897',
-  server: 'davi-server.database.windows.net', // You can use 'localhost\\instance' to connect to named instance
-  database: 'Davi-Bandtec',
+  user: 'igor.silva',
+  password: '#Gf47633297824',
+  server: 'server01191034.database.windows.net', // You can use 'localhost\\instance' to connect to named instance
+  database: 'BancoDigitalTime',
 
   options: {
       encrypt: true // Use this if you're on Windows Azure
@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
 
     // Query
  
-    new sql.Request().query('select * from cadastro', (err, result) => {
+    new sql.Request().query('select * from monitoramento', (err, result) => {
         // ... error checks
  
         //console.dir(result)
@@ -41,7 +41,7 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.post('/y', function(req, res, next){
+router.post('/', function(req, res, next){
 
   //console.log('teste');
   //console.log(req.body);
