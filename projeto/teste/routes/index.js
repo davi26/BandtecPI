@@ -43,7 +43,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next){
 
-  //console.log('teste');
-  //console.log(req.body);
+  console.log('teste');
+  console.log(req.body);
 });
 module.exports = router;
