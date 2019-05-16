@@ -1,0 +1,58 @@
+.formulario{
+    padding: 10px;
+    margin-left: 2%;
+    border: none;
+    background-color: rgba(255, 255, 255, .8);
+    height: 25px;
+    width: 90%;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.botao{
+    margin-left: 5%;
+    border: none;
+    width: 90%;
+    height: 40px;
+    background-color: rgba(108, 2, 179, 0.959);
+    font-family: tahoma;
+    color: rgb(255, 255, 255, .9);
+    border-radius: 20px 20px 20px 20px;
+}
+
+.titulo{
+    color: rgb(255, 255, 255, .9);
+    font-family: tahoma;
+    text-align: center;
+}
+
+.bord{
+    border-radius: 10px 10px 10px 10px;
+    background-color:rgba(231, 231, 231, .5);
+    border-style: solid;
+    border-width: 15px; 
+    width: 25%;
+    margin-left: 35%;
+    margin-top: 10%;
+    color: transparent;
+}
+
+.borda{
+
+    border-style: solid;  
+    border-width: 1px; 
+    margin: 1px; 
+    margin-top: 5px;  
+    color: transparent; 
+    margin-bottom: 5%;
+}
+.feito{
+    color:black;
+    font-family: tahoma;
+    text-align: center;
+}
+.senha{
+    color: blue;
+    text-align: right;
+    font-size: 13px;
+    font-family: tahoma;
+}

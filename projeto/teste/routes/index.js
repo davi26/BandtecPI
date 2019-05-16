@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var sql = require('mssql');
 
-sql.close();
+
 
 
 const config = {
@@ -20,33 +20,33 @@ const config = {
 /* GET home page. */
 router.get('/', function(req, res, next) {
   
-  sql.close(function (value) {
-    console.log("connection6 closed");
-  });
-  sql.connect(config, err => {
-    // ... error checks
- 
+  
 
-    // Query
- 
-    new sql.Request().query('insert into cadastro (nome,email,telefone,cpf,senha) values', (result, err) => {
+  res.render('cadastro');
+});
+
+
+
+router.post('/', function(req, res, next){
+
+
+  
+  sql.connect(config, err => {
+    new sql.Request().query(`insert into cadastro values ('${req.body.nome}',
+                                                          '${req.body.email}',
+                                                          '${req.body.telefone}',
+                                                          '${req.body.cpf}',
+                                                          '${req.body.senha}')
+                                                           `, (result, err) => {
         // ... error checks
  
         console.dir(result)
         console.dir(err)
     });
   });
-
-  res.render('cadastro');
-});
-
-sql.close(function(value) {
-  console.log("connection6 close")
-});
-
-router.post('/', function(req, res, next){
-
-  console.log('teste');
-  console.log(req.body);
+  
+  sql.close(function(value) {
+    console.log("connection6 close")
+  });
 });
 module.exports = router;
