@@ -6,20 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>cadastro</title>
     <link rel="stylesheet" href="/js/css/teste.css">
-</head>
-<body>
-    <form action="/" method="POST">
-        <input type="text" name="nome" placeholder="Nome" autofocus>
-        <br><br>
-        <input type="text" name="email" placeholder="E-mail">
-        <br><br>
-        <input type="number" name="telefone" placeholder="Telefone">
-        <br><br>
-        <input type="number" name="cpf" placeholder="CPF">
-        <br><br>
-        <input type="password" name="senha" placeholder="Senha">
-        <br><br>
-        <button type="submit">Cadastrar</button>
-    </form>
-</body>
-</html>
+    <style>
+        body{
+            background-image: url(img/foto.jpg);
+            background-attachment: fixed;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: black;
+        }
+        </style>
+    </head>
+    <body>
+    <div class="bord">
+        <div class="borda">
+            <h2 class="titulo">Cadastro</h2>
+            <form action="/" method="POST" onsubmit="return validacao()">
+                <input required class="formulario" type="text" name="nome" id="tnome"placeholder="  Nome" autofocus>
+                <br><br>
+                <input required class="formulario" type="email" name="email" id="tmail" placeholder="  E-mail">
+                <br><br>
+                <input required class="formulario" type="number" name="telefone" id="fone" placeholder="  Telefone">
+                <br><br>
+                <input required class="formulario" type="text" name="cpf" id="tcpf" placeholder="  CPF">
+                <br><br>
+                <input class="formulario" type="password" name="senha" id="tsenha" placeholder="  Senha">
+                <br><br>
+               <a href="imagem.html"><button type="button" class="botao">Cadastrar</button></a> 
+            </form>
+        </div>
+    </div>
+    </body>
+    </html>
+    <script>
+    function validacao(){
+        var nome = tnome.value;
+        var email = tmail.value;
+        var telefone = fone.value;
+        var cpf = tcpf.value;
+        var senha = tsenha.value;
+    
+        var erro = false;
+    
+    if (nome == ''){
+        alert('Favor preencher o campo "Nome"');
+        return false;
+    } 
+    if (email == ''){
+        alert('Favor preencher o campo "E-mail"');
+        return false;
+    }
+    
+    else if (telefone == ''){
+        alert('Favor preencher o campo "Telefone"');
+        return false;
+    }
+    else if (cpf.length != 11){
+        alert('Favor preencher corretamente o campo "CPF"');
+        return false;
+    }
+    else if (senha == ''){
+        alert('Favor preencher o campo "Senha"');
+        return false;
+    }
+    }
+    </script>
