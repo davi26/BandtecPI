@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
 
     // Query
  
-    new sql.Request().query('select * from monitoramento', (err, result) => {
+    new sql.Request().query('insert into cadastro (nome,email,telefone,cpf,senha) values', (result, err) => {
         // ... error checks
  
         console.dir(result)
@@ -40,6 +40,9 @@ router.get('/', function(req, res, next) {
   res.render('cadastro');
 });
 
+sql.close(function(value) {
+  console.log("connection6 close")
+});
 
 router.post('/', function(req, res, next){
 
