@@ -23,7 +23,7 @@ router.get('/cadastro', async function(req, res, next) {
 
 router.get('/',  function(req, res, next) {
  
-  res.render('cadastro');
+  res.render('login');
   
 
 });

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="/js/css/teste.css">
+    <style>
+        body{
+            background-image: url(foto.jpg);
+            background-attachment: fixed;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="">
+<div class="bord">
+    <div class="borda">
+        <h2 class="titulo">Login</h2>
+        <form action="imagem_login.html" method="POST" onsubmit="return validacao()">
+            <input required class="formulario" type="email" placeholder=" E-mail" autofocus id="temail">
+            <br><br>
+            <input required class="formulario" type="text" placeholder=" Senha" id="tsenha">
+            </br><br>
+            <button class="botao" type="submit"><b>Enviar</b></button>
+            <br><br>
+           <button class="botao" type="button" onclick="chamar_pagina()"><b>Cadastrar</b></button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+<script>
+function validacao(){
+    var email = temail.value;
+    var senha = tsenha.value;
+    if (email == ''){
+        alert('Favor preencher o campo "E-mail"');
+        return false;
+    } if (senha == ''){
+        alert('Favor preencher o campo "Senha"');
+        return false;
+    }
+}
+function chamar_pagina(){
+    window.location.href="carregar.html";
+}
+</script>
