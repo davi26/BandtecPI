@@ -10,7 +10,7 @@ const mssql = require('../configs/db')
 
 
 /* GET home page. */
-router.get('/cadastro', async function(req, res, next) {
+router.get('/login', async function(req, res, next) {
   const sql = await mssql.connect();
 
   sql.query('select * from cadastro',(err,result)=>{
@@ -23,7 +23,7 @@ router.get('/cadastro', async function(req, res, next) {
 
 router.get('/',  function(req, res, next) {
  
-  res.render('login');
+  res.render('cadastro');
   
 
 });
