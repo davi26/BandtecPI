@@ -10,7 +10,7 @@ const mssql = require('../configs/db')
 
 
 /* GET home page. */
-router.get('/login', async function(req, res, next) {
+router.get('/cadastro', async function(req, res, next) {
   const sql = await mssql.connect();
 
   sql.query('select * from cadastro',(err,result)=>{
