@@ -1,0 +1,22 @@
+.foto{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-content: center;
+    background-image: url('fotoo.jpg');
+    min-height: 100vh;
+    background-size: 100%;
+}
+.camada{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.418);
+
+}
+body{
+    margin: 0px;
+}
