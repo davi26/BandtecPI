@@ -204,7 +204,7 @@ a svg rect
 }
 a svg rect
 {
-  stroke: #00e2ff;
+  stroke:rgb(197, 0, 187);
   stroke-width: 4;
   transition: 2s;
   stroke-dasharray: 60 200;
@@ -212,7 +212,7 @@ a svg rect
 }
 a:hover svg rect
 {
-  stroke:rgb(197, 0, 187);
+  stroke: #00e2ff;
   stroke-dasharray: 200 60;
   stroke-dashoffset: 0;
 }
