@@ -32,6 +32,8 @@
                 <input class="formulario" type="password" name="senha" id="tsenha" placeholder="  Senha">
                 <br><br>
                 <button type="submit" class="botao">Cadastrar</button>
+                <br><br>
+                <button type="button" class="botao" onclick="chamar_tela()">Login</button>
             </form>
         </div>
     </div>
@@ -68,5 +70,8 @@
         alert('Favor preencher o campo "Senha"');
         return false;
     }
+    }
+    function chamar_tela(){
+        window.location.href="/carregar"
     }
     </script>

@@ -35,6 +35,20 @@ router.get('/login',  function(req, res, next) {
 
 });
 
+router.get('/carregar',  function(req, res, next) {
+ 
+  res.render('carregar');
+  
+
+});
+
+router.get('/carregar1',  function(req, res, next) {
+ 
+  res.render('carregar1');
+  
+
+});
+
 router.post('/login', async function(req, res, next) {
   console.log(req.body);
   const sql = await mssql.connect();
